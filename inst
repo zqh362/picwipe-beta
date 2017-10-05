@@ -1,0 +1,15 @@
+cd ~/Downloads
+gzip -dc Image-ExifTool-10.63.tar.gz | tar -xf - 
+cd Image-ExifTool-10.63
+perl Makefile.PL
+sudo make install
+git clone https://github.com/FFmpeg/FFmpeg.git
+cd FFmpeg
+./configure
+make
+make install
+cd
+cd ~/Downloads/picwipe-beta
+sudo mv picwipe /usr/local/bin
+
+
